@@ -25,6 +25,7 @@ df <- data.frame(X = data[, 1], Y = data[, 2])
 
 # 7. Plot the generated distribution
 ggplot(df, aes(x = X, y = Y)) +
-  geom_point(alpha = 0.6) +
+  geom_point(alpha = 0.5) +
+  geom_density_2d(color = "blue") +
   theme_minimal() +
-  ggtitle("Bivariate Normal Sample")
+  ggtitle("Bivariate Normal Sample with Contours")
